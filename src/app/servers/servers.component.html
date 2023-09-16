@@ -1,2 +1,8 @@
+<button class="btn btn-primary" [disabled]="!this.allowNewServer">Add Server</button>
+
+<!-- String interpolation and property binding in this case produce the same result -->
+<p>{{this.allowNewServer}}</p>
+<p [innerText]="allowNewServer"></p>
+
 <app-server></app-server>
 <app-server></app-server>
