@@ -1,3 +1,7 @@
+<label>Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<p>{{updatedServerName}}</p>
+
 <button class="btn btn-primary" [disabled]="!this.allowNewServer" (click)="onCreateServer()">Add Server</button>
 
 <!-- String interpolation and property binding in this case produce the same result -->
