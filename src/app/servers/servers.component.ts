@@ -14,6 +14,7 @@ export class ServersComponent {
   allowNewServer: boolean = false;
   serverCreationStatus = "No server was created";
   updatedServerName = '';
+  twoWayBindingExampleString = '2 way Binding example';
 
   constructor(){
     setTimeout(()=>{
@@ -22,7 +23,8 @@ export class ServersComponent {
   }
 
   onCreateServer(){
-    this.serverCreationStatus = 'Server was created';
+    this.serverCreationStatus = `Server ${this.twoWayBindingExampleString} was created`;
+    this.twoWayBindingExampleString = '';    
   }
 
   onUpdateServerName(event: Event){
@@ -34,4 +36,11 @@ export class ServersComponent {
     console.log(currentValue);
     this.updatedServerName = currentValue;
   }
+
+  // onUpdateServerName(event: any){
+  //   //Explicit cast and assing to variable
+  //   let currentValue = event.target.value;
+  //   console.log(currentValue);
+  //   this.updatedServerName = currentValue;
+  // }
 }
