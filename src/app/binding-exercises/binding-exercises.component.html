@@ -1,0 +1,8 @@
+<hr>
+<h3>Binding Examples</h3>
+<div class="form-group">
+    <label for="txtUsername">Username</label>
+    <input id="txtUsername" [(ngModel)]="username" type="text" class="form-control" placeholder="Username" />
+</div>
+<button type="button" class="btn btn-primary" [disabled]="username.length==0" (click)="onResetUsername($event)">Reset Username</button>
+<p>{{username}}</p>
