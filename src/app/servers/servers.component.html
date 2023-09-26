@@ -12,7 +12,13 @@
 <!-- String interpolation and property binding in this case produce the same result -->
 <p>{{this.allowNewServer}}</p>
 <p [innerText]="allowNewServer"></p>
+<!-- <p>{{serverCreationStatus}}</p> -->
 
-<p>{{serverCreationStatus}}</p>
+<label>Create Server</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<p *ngIf="serverCreated">Server created, the server name is {{serverName}}</p>
+<button class="btn btn-primary" (click)="onCreate($event)">Create Server</button>
+<button class="btn btn-default" (click)="onReset($event)">Reset</button>
+
 <app-server></app-server>
 <app-server></app-server>

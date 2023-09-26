@@ -15,6 +15,8 @@ export class ServersComponent {
   serverCreationStatus = "No server was created";
   updatedServerName = '';
   twoWayBindingExampleString = '2 way Binding example';
+  serverCreated = false;
+  serverName = '';
 
   constructor(){
     setTimeout(()=>{
@@ -25,6 +27,15 @@ export class ServersComponent {
   onCreateServer(){
     this.serverCreationStatus = `Server ${this.twoWayBindingExampleString} was created`;
     this.twoWayBindingExampleString = '';    
+  }
+
+  onCreate(event: any){
+    this.serverCreated = true;
+  }
+
+  onReset(event: any){
+    this.serverCreated = false;
+    this.serverName = '';
   }
 
   onUpdateServerName(event: Event){
