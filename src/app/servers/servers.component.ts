@@ -17,6 +17,7 @@ export class ServersComponent {
   twoWayBindingExampleString = '2 way Binding example';
   serverCreated = false;
   serverName = '';
+  showFirstParagraph = true;
 
   constructor(){
     setTimeout(()=>{
@@ -46,6 +47,10 @@ export class ServersComponent {
     let currentValue = (<HTMLInputElement>event.target).value;
     console.log(currentValue);
     this.updatedServerName = currentValue;
+  }
+
+  toggleParagraph(){
+    this.showFirstParagraph = !this.showFirstParagraph;
   }
 
   // onUpdateServerName(event: any){

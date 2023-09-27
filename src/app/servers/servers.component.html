@@ -20,5 +20,18 @@
 <button class="btn btn-primary" (click)="onCreate($event)">Create Server</button>
 <button class="btn btn-default" (click)="onReset($event)">Reset</button>
 
+<hr>
+<h4>If-else example</h4>
+
+<p *ngIf="showFirstParagraph; else secondPara">First Paragraph</p>
+<ng-template  #secondPara>
+    <p>Second paragragraph</p>
+</ng-template>
+
+<button class="btn btn-primary" (click)="showFirstParagraph = !showFirstParagraph">Toggle Paragraph</button>
+
+
+<hr>
+
 <app-server></app-server>
 <app-server></app-server>
