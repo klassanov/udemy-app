@@ -4,7 +4,10 @@
 <p [ngStyle]="{'background-color':getColor()}">The server with ID {{serverId}} status is {{serverStatus}}</p>
 
 <!-- quotes notation with camel case property name -->
-<p [ngStyle]="{backgroundColor:getColor()}">The server with ID {{serverId}} status is {{serverStatus}}</p>
+<!-- ngStyle and ngClass are built-in attribute directives -->
+<p [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online: serverStatus==='online'}">
+    The server with ID {{serverId}} status is {{serverStatus}}
+</p>
 
 <!-- Also possible to call a method in the string interpolation -->
 <p>The server with ID {{serverId}} status is {{getServerStatus()}}</p>
