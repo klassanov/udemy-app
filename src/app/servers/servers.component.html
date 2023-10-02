@@ -33,5 +33,11 @@
 
 <hr>
 
-<app-server></app-server>
-<app-server></app-server>
+
+
+<hr>
+
+<h3>NgFor example</h3>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<button class="btn btn-primary" (click)="createServer($event)">Create Server</button>
+<app-server *ngFor="let s of servers"></app-server>

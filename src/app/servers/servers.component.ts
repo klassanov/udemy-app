@@ -18,6 +18,7 @@ export class ServersComponent {
   serverCreated = false;
   serverName = '';
   showFirstParagraph = true;
+  servers = ['Testserver', 'Testserver2'];
 
   constructor(){
     setTimeout(()=>{
@@ -37,6 +38,10 @@ export class ServersComponent {
   onReset(event: any){
     this.serverCreated = false;
     this.serverName = '';
+  }
+
+  createServer(serverName: string){
+    this.servers.push(serverName);
   }
 
   onUpdateServerName(event: Event){
