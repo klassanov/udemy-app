@@ -1,0 +1,16 @@
+<hr>
+<h3>Directives Exercises</h3>
+<button type="button" (click)="displayDetailsClick($event)" class="btn btn-primary">
+    Display details
+</button>
+<p *ngIf="displayParagraph">Secret password = tuna</p>
+<div>
+    <div *ngFor="let c of clickEvents" 
+        [ngClass]="{white: c.id > 4}"
+        [ngStyle]="{backgroundColor: c.id > 4 ? 'blue' : 'default'}">
+        <span>{{c.id}}. click at {{c.timestamp}}</span>
+    </div>
+</div>
+
+<div style="margin-bottom: 100px;">
+</div>

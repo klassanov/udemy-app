@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { BindingExercisesComponent } from './binding-exercises/binding-exercises.component';
+import { DirectivesExercisesComponent } from './directives-exercises/directives-exercises.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BindingExercisesComponent } from './binding-exercises/binding-exercises
     WarningAlertComponent,
     SuccessAlertComponent,
     BindingExercisesComponent,
+    DirectivesExercisesComponent,
   ],
   imports: [
     BrowserModule,
