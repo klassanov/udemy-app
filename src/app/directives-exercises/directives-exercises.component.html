@@ -4,10 +4,24 @@
     Display details
 </button>
 <p *ngIf="displayParagraph">Secret password = tuna</p>
+
+<!-- Solution 1 -->
+<h4>Solution 1</h4>
 <div>
     <div *ngFor="let c of clickEvents" 
-        [ngClass]="{white: c.id > 4}"
+        [ngClass]="{'white': c.id > 4}"
         [ngStyle]="{backgroundColor: c.id > 4 ? 'blue' : 'default'}">
+        <span>{{c.id}}. click at {{c.timestamp}}</span>
+    </div>
+</div>
+<br />
+
+<!-- Solution 2: use the ngFor index -->
+<h4>Solution 2</h4>
+<div>
+    <div *ngFor="let c of clickEvents; let i = index" 
+        [ngClass]="{'white': i >=  4}"
+        [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'default'}">
         <span>{{c.id}}. click at {{c.timestamp}}</span>
     </div>
 </div>
